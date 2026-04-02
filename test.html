@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Card App</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #cbd5f5;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      background: #3b82f6;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>QR Mini App</h1>
+
+  <div class="card">
+    <h3>Kart 1</h3>
+    <p id="text1">Lorem ipsum dolor sit amet...</p>
+    <button onclick="degistir(1)">Değiştir</button>
+  </div>
+
+  <div class="card">
+    <h3>Kart 2</h3>
+    <p id="text2">Consectetur adipiscing elit...</p>
+    <button onclick="degistir(2)">Değiştir</button>
+  </div>
+
+  <div class="card">
+    <h3>Kart 3</h3>
+    <p id="text3">Sed do eiusmod tempor...</p>
+    <button onclick="degistir(3)">Değiştir</button>
+  </div>
+
+</div>
+
+<script>
+  const loremList = [
+    "Lorem ipsum dolor sit amet.",
+    "Consectetur adipiscing elit.",
+    "Sed do eiusmod tempor incididunt.",
+    "Ut labore et dolore magna aliqua.",
+    "Duis aute irure dolor in reprehenderit.",
+    "Excepteur sint occaecat cupidatat non proident."
+  ];
+
+  function degistir(id) {
+    const randomText = loremList[Math.floor(Math.random() * loremList.length)];
+    document.getElementById("text" + id).innerText = randomText;
+  }
+</script>
+
+</body>
+</html>

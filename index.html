@@ -168,18 +168,46 @@
         <div class="slide active" id="slide-0">
           <div class="welcome-icon">🎵</div>
           <h2>Bilecik Belediyesi Türk Halk Müziği Korosu Konseri</h2>
-          <p style="font-size:11px; color:#a0783a; margin-bottom:5px;">Erkek Koristler</p>
+          <p style="font-size:11px; color:#a0783a; margin-bottom:5px;">Erkek Koristler [TAM İSİM SOYİSİM LAZIM BİLDİKLERİMİ YAZDIM SAHNEDEKİ DÜZENE GÖRE DİZİCEM]</p>
           <div class="tag-row">
             <span class="tag">Ad Soyad</span>
             <span class="tag">Ad Soyad</span>
-            <!-- 17 erkek -->
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
           </div>
 
-          <p style="font-size:11px; color:#a0783a; margin:8px 0 5px;">Kadın Koristler</p>
+          <p style="font-size:11px; color:#a0783a; margin:8px 0 5px;">Kadın Koristler [TAM İSİM SOYİSİM LAZIM BİLDİKLERİMİ YAZDIM SAHNEDEKİ DÜZENE GÖRE DİZİCEM]</p>
           <div class="tag-row">
             <span class="tag">Ad Soyad</span>
             <span class="tag">Ad Soyad</span>
-            <!-- 17 kadın -->
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
+            <span class="tag">Ad Soyad</span>
           </div>
           <hr class="div">
           <p style="font-size:13px;color:#7a5a2a;">Oklar ile sayfalar arasında geçiş yapabilirsiniz. Her sayfada koromuzdan yeni bir şarkı sizi bekliyor.</p>
@@ -1029,16 +1057,16 @@
   }
   let touchStartX = 0;
 
-  document.querySelector('.card-container').addEventListener('touchstart', e => {
+  document.addEventListener('touchstart', e => {
     touchStartX = e.touches[0].clientX;
-  });
+  }, { passive: true });
 
-  document.querySelector('.card-container').addEventListener('touchend', e => {
+  document.addEventListener('touchend', e => {
     const diff = touchStartX - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 50) {
       navigate(diff > 0 ? 1 : -1);
     }
-  });
+  }, { passive: true });
 </script>
 
 </body>

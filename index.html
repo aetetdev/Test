@@ -123,12 +123,13 @@
     /* TAG */
     .tag {
       display: inline-block;
-      background: rgba(160,120,58,0.15);
+      background: rgba(160,120,58,0.13);
       color: #7a5020;
-      font-size: 10px;
-      padding: 3px 8px;
+      font-size: 11px;
+      padding: 3px 10px;
       border-radius: 20px;
-      margin: 2px;
+      margin-bottom: 8px;
+      width: fit-content;
     }
 
     .tag-row {
@@ -139,13 +140,31 @@
     /* ŞARKI ALANI */
     .empty-box {
       flex: 1;
-      border: 1px dashed rgba(160,120,58,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px dashed rgba(160,120,58,0.28);
       border-radius: 10px;
-      padding: 1rem;
+      margin-top: 0.8rem;
+      padding: 2rem;
+      color: #a0783a;
       font-size: 13px;
-      line-height: 1.7;
-      overflow-y: auto;
+      text-align: center;
+      gap: 6px;
     }
+
+    
+    .notes-deco {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 18px;
+      opacity: 0.2;
+      color: #5a3e1b;
+      pointer-events: none;
+    }
+
   </style>
 </head>
 <body>
@@ -188,7 +207,7 @@
           <div class="tag-row">
             <span class="tag">Aliye Topçuoğlu</span>
             <span class="tag">Aygün Eren</span>
-            <span class="tag">Ayşe Erbay</span>
+            <span class="tag">Ayşe Erbay Arıkan</span>
             <span class="tag">Burcu Kütük</span>
             <span class="tag">Dania Dante Asheya</span>
             <span class="tag">Dilan Cankurt</span>
